@@ -1,0 +1,55 @@
+@use '../abstracts';
+
+:root{
+    --logo-left: 18.688;
+    --menu-right: 18.938;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:nowrap;
+
+    &__logo {
+
+        $logo-top: 3.313rem;
+        $logo-width: 11.125rem;
+        $logo-height: 1.5rem;
+
+        width: $logo-width;
+        height: $logo-height;
+        margin-left: calc(var(--logo-left) * 1vw);
+        margin-top: $logo-top;
+    }
+
+    &__menu {
+        
+        $menu-top: 4.313rem;
+
+        display: flex;
+        margin-right: calc(var(--menu-right) * 1vw);
+        margin-top: $menu-top;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        padding-right: 1.5rem;
+        text-align: center;
+        display: flex; 
+    }
+
+    &__button {
+
+        @include abstracts.btn-transparent;
+
+        align-self: center;
+    }
+}

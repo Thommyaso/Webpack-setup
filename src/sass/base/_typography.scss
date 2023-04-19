@@ -1,0 +1,13 @@
+h1, h2, h2 {
+    line-height: 1.1;
+    margin-top: 0;
+}   // czy to dobra praktyka? czy lepiej by bylo wszystkiemu ustawic margin 0
+
+p {
+    margin-top: 0;
+}
+
+a, a:visited, a:active {
+    color: unset;
+    text-decoration: none;
+}

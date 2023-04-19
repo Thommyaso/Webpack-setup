@@ -1,0 +1,125 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h2 {
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a, a:visited, a:active {
+  color: unset;
+  text-decoration: none;
+}
+
+:root {
+  --logo-left: 18.688;
+  --menu-right: 18.938;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.nav__logo {
+  width: 11.125rem;
+  height: 1.5rem;
+  margin-left: calc(var(--logo-left) * 1vw);
+  margin-top: 3.313rem;
+}
+.nav__menu {
+  display: flex;
+  margin-right: calc(var(--menu-right) * 1vw);
+  margin-top: 4.313rem;
+}
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.nav__link {
+  padding-right: 1.5rem;
+  text-align: center;
+  display: flex;
+}
+.nav__button {
+  border: 0.063rem solid rgba(255, 255, 255, 0.31);
+  background-color: transparent;
+  align-self: center;
+}
+
+.header {
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 3%;
+  background-image: linear-gradient(39deg, #cb0036 0%, #e06800 100%);
+  background-blend-mode: darken;
+}
+.header__wrapper {
+  z-index: 100;
+  background-image: url("../../png/Layer_4_copy.png");
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.header__info {
+  box-sizing: border-box;
+  height: 55vw;
+  /*         width: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 23%;
+}
+.header__title {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.header__paragraph {
+  max-width: 480px;
+}
+.header__options {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.header__btn-ask {
+  background-color: white;
+  color: #d32721;
+  border: none;
+}
+.header__btn-watch {
+  border: 0.063rem solid rgba(255, 255, 255, 0.31);
+  background-color: transparent;
+}
+
+.button {
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 1.563rem;
+  padding: 0.5rem 1.3rem;
+  /* background-color: #ffffff; */
+}
+
+/*
+width: 6.313rem;
+height: 2.438rem;
+border-radius: 1.125rem;
+
+background-color: #ffffff; *//*# sourceMappingURL=style.css.map */
