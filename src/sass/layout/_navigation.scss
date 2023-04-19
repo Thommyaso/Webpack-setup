@@ -19,14 +19,14 @@
         $logo-width: 11.125rem;
         $logo-height: 1.5rem;
 
-        width: $logo-width;
+        width:  $logo-width;
         height: $logo-height;
         margin-left: calc(var(--logo-left) * 1vw);
         margin-top: $logo-top;
     }
 
     &__menu {
-        
+
         $menu-top: 4.313rem;
 
         display: flex;
