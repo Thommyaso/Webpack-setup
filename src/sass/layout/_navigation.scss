@@ -1,4 +1,5 @@
 @use '../abstracts';
+@use './functions' as *;
 
 :root{
     --logo-left: 18.688;
@@ -15,14 +16,15 @@
 
     &__logo {
 
-        $logo-top: 3.313rem;
+        $logo-top: 53;
         $logo-width: 11.125rem;
         $logo-height: 1.5rem;
+        $logo-left: 299;
 
         width:  $logo-width;
         height: $logo-height;
-        margin-left: calc(var(--logo-left) * 1vw);
-        margin-top: $logo-top;
+        margin-left: #{scaleWidth($logo-left)};
+        margin-top: #{scaleHeight($logo-top)};
     }
 
     &__menu {
@@ -30,8 +32,8 @@
         $menu-top: 4.313rem;
 
         display: flex;
-        margin-right: calc(var(--menu-right) * 1vw);
-        margin-top: $menu-top;
+        margin-right: #{scaleWidth(282)};
+        margin-top: #{scaleHeight(57)};
     }
 
     &__list {

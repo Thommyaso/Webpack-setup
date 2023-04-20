@@ -2,7 +2,7 @@
 @use './functions' as *;
 
 .header {
-
+    box-sizing: border-box;
     background-image: linear-gradient(39deg, #cb0036 0%, #e06800 100%);
     background-blend-mode:darken;
     display: flex;

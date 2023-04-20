@@ -18,7 +18,7 @@ module.exports = {
   },
   devtool: 'source-map',
   devServer: {
-    static: './dist',
+    static: ['src', 'dist'],
     compress: true,
     port: 9000,
   },
