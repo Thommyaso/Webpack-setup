@@ -1,0 +1,68 @@
+@use './functions' as *;
+
+//base structure designed using flex: 
+.body {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.header {
+
+    $ideal-header-hight: 1080;
+
+    max-width: var(--ideal-viewport-width)px;
+    height: #{scaleHeight($ideal-header-hight)};
+}
+
+.main {
+    max-width: var(--ideal-viewport-width)px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    max-width: var(--ideal-viewport-width)px;
+    height: fit-content;
+}
+
+//main structure designed using flex:
+.icons-section {
+
+    $ideal-icons-section-height: 598;
+
+    height: #{scaleHeight($ideal-icons-section-height)};
+    width: inherit;
+}
+
+.info {
+
+    $ideal-info-height: 868;
+
+    height: #{scaleHeight($ideal-info-height)};
+}
+
+.grid {
+    height: fit-content;
+    width: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: inherit inherit;
+}
+
+.sign-up{
+
+    $ideal-signup-height: 489;
+
+    width: inherit;
+    height: #{scaleHeight($ideal-signup-height)};
+}
+
+.map {
+
+    $ideal-map-height: 607;
+
+    width: inherit;
+    height: #{scaleHeight($ideal-map-height)};
+}

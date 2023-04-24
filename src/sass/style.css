@@ -1,4 +1,4 @@
-html {
+* {
   box-sizing: border-box;
   font-size: 100%;
   text-decoration: none;
@@ -28,7 +28,6 @@ a, a:visited, a:active {
   --ideal-viewport-width: 1920;
   --ideal-viewport-height: 1080;
   --aspect-ratio: calc(9/16 *100vw);
-  --color: pink;
 }
 
 :root {
@@ -77,8 +76,7 @@ a, a:visited, a:active {
   background-image: linear-gradient(39deg, #cb0036 0%, #e06800 100%);
   background-blend-mode: darken;
   display: flex;
-  width: calc( 1920 * (clamp(350px, 100vw, 3840px) / var(--ideal-viewport-width)) );
-  height: calc( 1080 * (clamp(350px, var(--aspect-ratio), 3840px) / var(--ideal-viewport-height)) );
+  width: 100%;
 }
 .header__wrapper {
   background-image: url("../../png/Layer_4_copy.png");
@@ -119,19 +117,58 @@ a, a:visited, a:active {
   color: white;
 }
 
-.icons-section {
-  width: 100vw;
-}
-.icons-section__container {
-  display: flex;
-  justify-content: center;
-}
-.icons-section__sticker {
+.body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 242px;
-  height: 229px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.header {
+  max-width: var(--ideal-viewport-width) px;
+  height: calc( 1080 * (clamp(350px, var(--aspect-ratio), 3840px) / var(--ideal-viewport-height)) );
+}
+
+.main {
+  max-width: var(--ideal-viewport-width) px;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  max-width: var(--ideal-viewport-width) px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.icons-section {
+  height: calc( 598 * (clamp(350px, var(--aspect-ratio), 3840px) / var(--ideal-viewport-height)) );
+  width: inherit;
+}
+
+.info {
+  height: calc( 868 * (clamp(350px, var(--aspect-ratio), 3840px) / var(--ideal-viewport-height)) );
+}
+
+.grid {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: inherit;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: inherit inherit;
+}
+
+.sign-up {
+  width: inherit;
+  height: calc( 489 * (clamp(350px, var(--aspect-ratio), 3840px) / var(--ideal-viewport-height)) );
+}
+
+.map {
+  width: inherit;
+  height: calc( 607 * (clamp(350px, var(--aspect-ratio), 3840px) / var(--ideal-viewport-height)) );
 }
 
 .button {

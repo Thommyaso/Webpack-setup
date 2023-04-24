@@ -16,24 +16,25 @@
 
     &__logo {
 
-        $logo-top: 53;
+        $logo-margin-top: 53;
+        $logo-margin-left: 299;
         $logo-width: 11.125rem;
         $logo-height: 1.5rem;
-        $logo-left: 299;
-
+        
         width:  $logo-width;
         height: $logo-height;
-        margin-left: #{scaleWidth($logo-left)};
-        margin-top: #{scaleHeight($logo-top)};
+        margin-left: #{scaleWidth($logo-margin-left)};
+        margin-top: #{scaleHeight($logo-margin-top)};
     }
 
     &__menu {
 
-        $menu-top: 4.313rem;
+        $menu-marin-right: 282;
+        $menu-margin-top: 57;
 
         display: flex;
-        margin-right: #{scaleWidth(282)};
-        margin-top: #{scaleHeight(57)};
+        margin-right: #{scaleWidth($menu-marin-right)};
+        margin-top: #{scaleHeight($menu-margin-top)};
     }
 
     &__list {
