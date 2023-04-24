@@ -1,2 +1,65 @@
+@use '../abstracts';
+@use './functions' as *;
 
+.icons-section {
+
+    $iconssection-ideal-sidepadding: 340;
+    $ideal-icons-section-height: 598;
+    $ideal-icons-section-paddingbottom: 100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: #{scaleWidth($iconssection-ideal-sidepadding)};
+    padding-right: #{scaleWidth($iconssection-ideal-sidepadding)};
+    padding-bottom: #{scaleHeight($ideal-icons-section-paddingbottom)};
+    background-color: #f6f6f6;
+
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content:space-between;
+        margin-bottom: 104px;
+    }
+
+    &__sticker {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        justify-content: space-between;
+        width: 242px;
+        height: 230px;
+    }
+
+    &__icon-box {
+        width: 110px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: baseline;
+    }
+
+    &__header {
+        width: inherit;
+        text-align: center;
+        font-size: 1.469rem;
+        padding-bottom: 24px;
+        background: linear-gradient(15deg, #cb0035 0%, #e06900 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__paragraph {
+        text-align: center;
+        /* font-size: 0.785rem; */
+        line-height: 1.47rem;
+    }
+
+    &__button {
+        @include abstracts.btn-blue;
+    }
+}
 
