@@ -342,6 +342,10 @@ a, a:visited, a:active {
   opacity: 0.8;
 }
 
+.map__img {
+  width: 100%;
+}
+
 .body {
   display: flex;
   flex-direction: column;
