@@ -2,18 +2,22 @@
     border: 0.063rem solid rgba(255, 255, 255, 0.31);
     background-color: transparent;
     color: white;
-    padding-left: unset;
-    padding-right: unset;
+    border-radius: 1.563rem;
+    padding: 0.5rem 3.375rem;
 }
 
 @mixin btn-white {
     background-color: white;
     color: #d32721;
     border: none;
+    border-radius: 1.563rem;
+    padding: 0.5rem 3.375rem;
 }
 
 @mixin btn-blue {
     background-color: #264699;
     color: #ffffff;
     border: none;
+    border-radius: 1.563rem;
+    padding: 0.5rem 3.375rem;
 }

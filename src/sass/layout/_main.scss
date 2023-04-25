@@ -72,8 +72,6 @@
     display: flex;
     flex-direction: column;
     justify-content:center;
-    /* background-position: right; */
-    /* background-size:contain; */
     padding-left: 299px;
 
     &__header {
@@ -175,6 +173,63 @@
     &__button {
         width: fit-content;
         @include abstracts.btn-blue;
+    }
+}
+
+.sign-up {
+        
+    background-image: linear-gradient(39deg, #cb0036 0%, #e06800 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__img {
+        
+        opacity: 0.2;
+        z-index: 0;
+        width: 100%;
+        position: absolute;   
+    }
+
+    &__header {
+        position: relative;
+        z-index: 1;
+        font-size: 48px;
+        color: white;
+        z-index: 100;
+        margin-bottom: 42px;
+    }
+
+    &__form {
+        position: relative;
+        width: fit-content;
+    }
+
+    &__input{
+        height: 100%;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.46);
+        background-color: rgba(255, 255, 255, 0.163);
+        padding-left: 20px;
+        padding-right: 20px;
+        border-top-left-radius: 25px 25px;
+        border-bottom-left-radius: 25px 25px;
+        outline: none;
+    }
+
+    &__button{
+        @include abstracts.btn-white;
+        height: 100%;
+        float: right;
+        position: relative;
+        left: -20px;
+        padding: 0.5rem 1.375rem;  
+    }
+
+    &__input::placeholder {
+        color: white;
+        opacity: 0.8;
     }
 }
 
