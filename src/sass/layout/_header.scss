@@ -18,12 +18,10 @@
         background-repeat: no-repeat;
         width: inherit;
         height: inherit;
-        box-sizing: border-box;
         padding-top: #{scaleHeight($ideal-headerwrapper-padding-top)};
     }
 
     &__info {
-        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content:center;
