@@ -11,8 +11,9 @@
 
     $ideal-header-hight: 1080;
 
-    max-width: var(--ideal-viewport-width)px;
     height: #{scaleHeight($ideal-header-hight)};
+    max-width: var(--ideal-viewport-width)px;
+    
 }
 
 .main {
@@ -23,8 +24,11 @@
 }
 
 .footer {
+
+    $ideal-footer-height: 350;
+
     max-width: var(--ideal-viewport-width)px;
-    height: fit-content;
+    height: #{scaleHeight($ideal-footer-height)};
 }
 
 //main structure designed using flex:

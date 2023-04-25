@@ -234,9 +234,22 @@
 }
 
 .map {
-    
+
     &__img {
         width: 100%;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    line-height: 24px;
+    padding-top: 50px;
+
+    &__link {
+        font-weight: bold;
     }
 }
 
