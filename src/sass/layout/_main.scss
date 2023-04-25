@@ -4,7 +4,7 @@
 .icons-section {
 
     $iconssection-ideal-sidepadding: 340;
-    $ideal-icons-section-height: 598;
+    $ideal-icons-section-height: 600;
     $ideal-icons-section-paddingbottom: 100;
 
     display: flex;
@@ -14,13 +14,15 @@
     padding-left: #{scaleWidth($iconssection-ideal-sidepadding)};
     padding-right: #{scaleWidth($iconssection-ideal-sidepadding)};
     padding-bottom: #{scaleHeight($ideal-icons-section-paddingbottom)};
-    background-color: #f6f6f6;
+    background-color: var(--gray-background);
 
     &__container {
         width: 100%;
+        height: fit-content;
         display: flex;
+        flex-wrap: wrap;
         justify-content:space-between;
-        margin-bottom: 104px;
+        margin-bottom: 6.5rem;
     }
 
     &__sticker {
@@ -42,18 +44,22 @@
         justify-self: baseline;
     }
 
+    &__description {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
     &__header {
-        width: inherit;
-        text-align: center;
+        align-self: center;
         font-size: 1.469rem;
         padding-bottom: 24px;
-        background: linear-gradient(15deg, #cb0035 0%, #e06900 100%);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+       @include abstracts.gradient-text;
     }
 
     &__paragraph {
         text-align: center;
+        color: var( --standard-paragraph-color);
         /* font-size: 0.785rem; */
         line-height: 1.47rem;
     }
@@ -65,6 +71,9 @@
 
 
  .info {
+
+    $ideal-info-padding-left: 300;
+
     background-image: url('../../png/big-drone.png');
     background-size: 50%;
     background-position: right;
@@ -72,21 +81,18 @@
     display: flex;
     flex-direction: column;
     justify-content:center;
-    padding-left: 299px;
+    padding-left: #{scaleWidth($ideal-info-padding-left)};
 
     &__header {
-        width: fit-content;
-        font-size: 48px;
+        @include abstracts.gradient-text;
+        font-size: var(--main-title-font-size);
         margin-bottom: 32px;
-        background: linear-gradient(15deg, #cb0035 0%, #e06900 100%);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
 
     &__paragraph {
+        color: var( --standard-paragraph-color);
         max-width: 776px;
         line-height: 36px;
-        
     }
 
     &__list{
@@ -99,22 +105,27 @@
     }
 
     &__list-element {
+        color: var(--small-text-color);
         display: flex;
         margin-bottom: 3em;
         max-width: 374px;
         counter-increment: listCounter;
         align-items: center;
         font-size: 12px;
+        line-height: 24px;
     }
 
     &__list-element::before {
+
+        $bullet-square-size: 3.125rem;
+
         content: counter(listCounter);
         font-size: 24px;
-        border: 2px solid #c7cde0;
-        color: #1d2f5e;
+        border: var(--list-bullet-border);
+        color: var(--list-bullet-color);
         border-radius: 50%;
-        width:3.125rem;
-        height: 3.125rem;
+        width: $bullet-square-size;
+        height: $bullet-square-size;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -128,7 +139,7 @@
 
     $grid-info-side-margin: 110px;
 
-    background-color: #f6f6f6;
+    background-color: var(--gray-background);
 
     &__img {
         width: 100%;
@@ -151,21 +162,17 @@
     }
 
     &__header {
-        width: fit-content;
-        height: fit-content;
-        font-size: 48px;
+        
+        @include abstracts.gradient-text;
+        font-size: var(--main-title-font-size);
         line-height:normal;
-        background: linear-gradient(15deg, #cb0035 0%, #e06900 100%);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin: 0;
         padding-bottom: 24px;
     }
 
     &__paragraph {
         line-height: 36px;
         max-width: 559px;
-        color: #5e6372;
+        color: var(--standard-paragraph-color);
         text-align: left;
         padding-bottom: 60px;
     }
@@ -177,8 +184,10 @@
 }
 
 .sign-up {
+
+    $email-cover-radius-offset: 3rem;
         
-    background-image: linear-gradient(39deg, #cb0036 0%, #e06800 100%);
+    background-image: var(--background-gradient);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,8 +204,8 @@
     &__header {
         position: relative;
         z-index: 1;
-        font-size: 48px;
-        color: white;
+        font-size: var(--main-title-font-size);
+        color: var(--white-text);
         z-index: 100;
         margin-bottom: 42px;
     }
@@ -208,13 +217,12 @@
 
     &__input{
         height: 100%;
-        color: white;
-        border: 1px solid rgba(255, 255, 255, 0.46);
+        color: var(--white-text);
+        border: var(--transparent-button-border);
         background-color: rgba(255, 255, 255, 0.163);
         padding-left: 20px;
-        padding-right: 20px;
-        border-top-left-radius: 25px 25px;
-        border-bottom-left-radius: 25px 25px;
+        padding-right: $email-cover-radius-offset;
+        border-radius: var(--border-radius);
         outline: none;
     }
 
@@ -223,24 +231,24 @@
         height: 100%;
         float: right;
         position: relative;
-        left: -20px;
-        padding: 0.5rem 1.375rem;  
+        left: -$email-cover-radius-offset;
+        padding: var(--top-bttom-padding) var(--email-btn-left-right-padding);
     }
 
     &__input::placeholder {
-        color: white;
+        color: var(--white-text);
         opacity: 0.8;
     }
 }
 
 .map {
-
     &__img {
         width: 100%;
     }
 }
 
 .footer {
+    color: var(--small-text-color);
     display: flex;
     justify-content: center;
     text-align: center;

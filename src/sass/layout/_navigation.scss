@@ -47,13 +47,13 @@
     &__link {
         padding-right: 1.5rem;
         text-align: center;
-        display: flex; 
+        display: flex;
+        color: var(--white-text);
     }
 
     &__button {
 
         @include abstracts.btn-transparent;
-
         align-self: center;
     }
 }

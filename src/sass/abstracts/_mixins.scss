@@ -1,23 +1,28 @@
 @mixin btn-transparent {
-    border: 0.063rem solid rgba(255, 255, 255, 0.31);
+    border: var(--transparent-button-border);
     background-color: transparent;
-    color: white;
-    border-radius: 1.563rem;
-    padding: 0.5rem 3.375rem;
+    color: var(--white-text);
+    padding: var(--top-bttom-padding) var(--standard-left-right-padding);
 }
 
 @mixin btn-white {
-    background-color: white;
-    color: #d32721;
+    background-color: var(--white-text);
+    color: var(--btn-white-text-color);
     border: none;
-    border-radius: 1.563rem;
-    padding: 0.5rem 3.375rem;
+    padding: var(--top-bttom-padding) var(--standard-left-right-padding);
 }
 
 @mixin btn-blue {
-    background-color: #264699;
-    color: #ffffff;
+    background-color: var(--btn-blue-color);
+    color: var(--white-text);
     border: none;
-    border-radius: 1.563rem;
-    padding: 0.5rem 3.375rem;
+    padding: var(--top-bttom-padding) var(--standard-left-right-padding);
+}
+
+@mixin gradient-text {
+    background: var(--gradient-text-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    height: fit-content;
 }
