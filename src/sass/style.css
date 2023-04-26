@@ -182,6 +182,11 @@ a, a:visited, a:active {
   z-index: 1;
 }
 
+@media only screen and (max-width: 1300px) {
+  .header__btn-watch {
+    background-color: var(--btn-border-gray);
+  }
+}
 .icons-section {
   height: calc( 600 * (clamp(var(--min-viewport), var(--aspect-ratio), var(--max-viewport)) / var(--ideal-viewport-height)) );
   width: inherit;

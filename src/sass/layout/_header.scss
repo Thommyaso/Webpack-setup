@@ -81,3 +81,11 @@
         z-index: 1;
     }
 }
+
+@media only screen and (max-width: 1300px) {
+    .header {
+        &__btn-watch {
+            background-color: var(--btn-border-gray) ;
+        }
+    }
+}
