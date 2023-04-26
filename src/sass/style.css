@@ -94,6 +94,14 @@ a, a:visited, a:active {
   height: 2.5rem;
 }
 
+@media only screen and (max-width: 1200px) {
+  .nav__logo {
+    margin-left: calc( 149 * (clamp(var(--min-viewport), 100vw, var(--max-viewport)) / var(--ideal-viewport-width)) );
+  }
+  .nav__menu {
+    margin-right: calc( 141 * (clamp(var(--min-viewport), 100vw, var(--max-viewport)) / var(--ideal-viewport-width)) );
+  }
+}
 .header {
   position: relative;
   background-image: var(--background-gradient);

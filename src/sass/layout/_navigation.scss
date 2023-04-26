@@ -53,3 +53,20 @@
         height: $button-height;
     }
 }
+
+
+@media only screen and (max-width: 1200px) {
+    .nav {
+        
+        $logo-margin-left: 149;
+        $menu-marin-right: 141;
+
+        &__logo {
+            margin-left: #{scaleWidth($logo-margin-left)};
+        }
+
+        &__menu {
+            margin-right: #{scaleWidth($menu-marin-right)};
+        }    
+    }
+}
