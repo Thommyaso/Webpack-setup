@@ -3,26 +3,34 @@
 
 .icons-section {
 
-    $iconssection-ideal-sidepadding: 340;
     $ideal-icons-section-height: 600;
+    $iconssection-ideal-sidepadding: 340;
     $ideal-icons-section-paddingbottom: 100;
+    $container-margin-bottom: 6.5rem;
+    $sticker-width: 15.125rem;
+    $sticker-height: 14.375rem;
+    $icon-width: 6.875rem;
+    $icon-height: 6.25rem;
+    $header-padding-bottom: 1.5rem;
 
+    height: #{scaleHeight($ideal-icons-section-height)};
+    width: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     padding-left: #{scaleWidth($iconssection-ideal-sidepadding)};
     padding-right: #{scaleWidth($iconssection-ideal-sidepadding)};
-    padding-bottom: #{scaleHeight($ideal-icons-section-paddingbottom)};
     background-color: var(--gray-background);
 
     &__container {
         width: 100%;
         height: fit-content;
         display: flex;
-        flex-wrap: wrap;
+        align-content: center;
+        /* flex-wrap: wrap; */
         justify-content:space-between;
-        margin-bottom: 6.5rem;
+        margin-bottom: $container-margin-bottom;
     }
 
     &__sticker {
@@ -31,13 +39,13 @@
         align-items: center;
         justify-content: flex-end;
         justify-content: space-between;
-        width: 242px;
-        height: 230px;
+        width: $sticker-width;
+        height: $sticker-height;
     }
 
     &__icon-box {
-        width: 110px;
-        height: 100px;
+        width: $icon-width;
+        height: $icon-height;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -51,16 +59,15 @@
     }
 
     &__header {
+        @include abstracts.gradient-text;
         align-self: center;
-        font-size: 1.469rem;
-        padding-bottom: 24px;
-       @include abstracts.gradient-text;
+        font-size: var(--larger-font-size);
+        padding-bottom: $header-padding-bottom;
     }
 
     &__paragraph {
         text-align: center;
         color: var( --standard-paragraph-color);
-        /* font-size: 0.785rem; */
         line-height: 1.47rem;
     }
 
@@ -72,8 +79,20 @@
 
  .info {
 
+    $ideal-info-height: 868;
     $ideal-info-padding-left: 300;
+    $header-margin-bottom: 2rem;
+    $paragraph-max-width: 48.5rem;
+    $ol-list-width: 60rem;
+    $ol-list-height: 21.875rem;
+    $ol-list-margin-top: 3.75rem;
+    $list-element-max-width: 23.375rem;
+    $list-element-margin-bottom: 3em;
+    $list-el-bullet-square-size: 3.125rem;
+    $list-el-bullet-margin-right: 1.875rem;
 
+
+    height: #{scaleHeight($ideal-info-height)};
     background-image: url('../../png/big-drone.png');
     background-size: 50%;
     background-position: right;
@@ -86,19 +105,19 @@
     &__header {
         @include abstracts.gradient-text;
         font-size: var(--main-title-font-size);
-        margin-bottom: 32px;
+        margin-bottom: $header-margin-bottom;
     }
 
     &__paragraph {
         color: var( --standard-paragraph-color);
-        max-width: 776px;
-        line-height: 36px;
+        max-width: $paragraph-max-width;
+        line-height: 2.25rem;
     }
 
     &__list{
-        width: 958px;
-        height: 350px;
-        margin-top: 61px;
+        width: $ol-list-width;
+        height: $ol-list-height;
+        margin-top: $ol-list-margin-top;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -107,38 +126,42 @@
     &__list-element {
         color: var(--small-text-color);
         display: flex;
-        margin-bottom: 3em;
-        max-width: 374px;
+        margin-bottom: $list-element-margin-bottom;
+        max-width: $list-element-max-width;
         counter-increment: listCounter;
         align-items: center;
-        font-size: 12px;
-        line-height: 24px;
+        font-size: var(--small-font-size);
+        line-height: 1.5rem;
     }
 
     &__list-element::before {
-
-        $bullet-square-size: 3.125rem;
-
         content: counter(listCounter);
-        font-size: 24px;
+        font-size: var(--larger-font-size);
         border: var(--list-bullet-border);
         color: var(--list-bullet-color);
         border-radius: 50%;
-        width: $bullet-square-size;
-        height: $bullet-square-size;
+        width: $list-el-bullet-square-size;
+        height: $list-el-bullet-square-size;
         display: flex;
         justify-content: center;
         align-items: center;
         line-height: 1.0;
         flex-shrink: 0;
-        margin-right: 30px;
+        margin-right: $list-el-bullet-margin-right;
     }
 } 
 
 .grid {
 
-    $grid-info-side-margin: 110px;
+    $grid-info-side-margin: 6.875rem;
+    $header-padding-bottom: 1.5rem;
+    $paragraph-max-width: 35rem;
+    $paragraph-padding-bottom: 3.75rem;
 
+    height: fit-content;
+    width: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-color: var(--gray-background);
 
     &__img {
@@ -162,31 +185,35 @@
     }
 
     &__header {
-        
         @include abstracts.gradient-text;
         font-size: var(--main-title-font-size);
         line-height:normal;
-        padding-bottom: 24px;
+        padding-bottom: $header-padding-bottom;
     }
 
     &__paragraph {
-        line-height: 36px;
-        max-width: 559px;
+        line-height: 2.25rem;
+        max-width: $paragraph-max-width;
         color: var(--standard-paragraph-color);
         text-align: left;
-        padding-bottom: 60px;
+        padding-bottom: $paragraph-padding-bottom;
     }
 
     &__button {
-        width: fit-content;
         @include abstracts.btn-blue;
+        width: fit-content;
     }
 }
 
 .sign-up {
 
+    $ideal-signup-height: 485;
     $email-cover-radius-offset: 3rem;
-        
+    $input-padding-left: 1.25rem;
+    $header-margin-bottom: 2.625rem;
+
+    width: inherit;
+    height: #{scaleHeight($ideal-signup-height)};    
     background-image: var(--background-gradient);
     display: flex;
     flex-direction: column;
@@ -207,7 +234,7 @@
         font-size: var(--main-title-font-size);
         color: var(--white-text);
         z-index: 100;
-        margin-bottom: 42px;
+        margin-bottom: $header-margin-bottom;
     }
 
     &__form {
@@ -219,9 +246,9 @@
         height: 100%;
         color: var(--white-text);
         border: var(--transparent-button-border);
-        background-color: rgba(255, 255, 255, 0.163);
-        padding-left: 20px;
-        padding-right: $email-cover-radius-offset;
+        background-color: var(--signup-input-background-color);
+        padding-left: $input-padding-left;
+        padding-right: calc($email-cover-radius-offset + $input-padding-left / 2);
         border-radius: var(--border-radius);
         outline: none;
     }
@@ -242,22 +269,14 @@
 }
 
 .map {
+
+    $ideal-map-height: 607;
+
+    width: inherit;
+    height: #{scaleHeight($ideal-map-height)};
+
     &__img {
         width: 100%;
-    }
-}
-
-.footer {
-    color: var(--small-text-color);
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 12px;
-    line-height: 24px;
-    padding-top: 50px;
-
-    &__link {
-        font-weight: bold;
     }
 }
 

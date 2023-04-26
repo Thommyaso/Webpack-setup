@@ -1,12 +1,17 @@
 @use '../abstracts';
 @use './functions' as *;
 
-:root{
-    --logo-left: 18.688;
-    --menu-right: 18.938;
-}
-
 .nav {
+
+    $logo-margin-top: 53;
+    $logo-margin-left: 299;
+    $logo-width: 11.125rem;
+    $logo-height: 1.5rem;
+    $menu-marin-right: 282;
+    $menu-margin-top: 57;
+    $link-padding-right: 1.5rem;
+    $button-height: 2.5rem;
+
     position: absolute;
     top: 0;
     z-index: 1;
@@ -16,12 +21,6 @@
     flex-wrap:nowrap;
 
     &__logo {
-
-        $logo-margin-top: 53;
-        $logo-margin-left: 299;
-        $logo-width: 11.125rem;
-        $logo-height: 1.5rem;
-        
         width:  $logo-width;
         height: $logo-height;
         margin-left: #{scaleWidth($logo-margin-left)};
@@ -29,10 +28,6 @@
     }
 
     &__menu {
-
-        $menu-marin-right: 282;
-        $menu-margin-top: 57;
-
         display: flex;
         margin-right: #{scaleWidth($menu-marin-right)};
         margin-top: #{scaleHeight($menu-margin-top)};
@@ -45,15 +40,16 @@
     }
 
     &__link {
-        padding-right: 1.5rem;
+        padding-right: $link-padding-right;
         text-align: center;
         display: flex;
         color: var(--white-text);
     }
 
     &__button {
-
         @include abstracts.btn-transparent;
         align-self: center;
+        padding: 0 var(--left-right-navigation-button-padding);
+        height: $button-height;
     }
 }
