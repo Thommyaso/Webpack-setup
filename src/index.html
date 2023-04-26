@@ -14,18 +14,23 @@
     <body class="body">
         <nav class="nav" id="nav">
             <img class="nav__logo" src="../png/Logo.png"></img>
+            <a class="nav__hamburger-button">
+                <span class="nav__hamburger-bar"></span>
+                <span class="nav__hamburger-bar"></span>
+                <span class="nav__hamburger-bar"></span>
+            </a>
             <div class="nav__menu">
                 <ul class="nav__list">
-                    <li class="nav__element"><a href="#nav" class="nav__link">Home</a></li>
-                    <li class="nav__element"><a href="#nav" class="nav__link">About</a></li>
-                    <li class="nav__element"><a href="#nav" class="nav__link">Pricing</a></li>
-                    <li class="nav__element"><a href="#nav" class="nav__link">Our drones</a></li>
-                    <li class="nav__element"><a href="#nav" class="nav__link">Our realizations</a></li>
+                    <li class="nav__element"><a href="#header" class="nav__link">Home</a></li>
+                    <li class="nav__element"><a href="#header" class="nav__link">About</a></li>
+                    <li class="nav__element"><a href="#header" class="nav__link">Pricing</a></li>
+                    <li class="nav__element"><a href="#header" class="nav__link">Our drones</a></li>
+                    <li class="nav__element"><a href="#header" class="nav__link">Our realizations</a></li>
                 </ul>
                 <button class="button nav__button">Contact</button>
             </div>
         </nav>
-        <header class="header">  
+        <header id="header" class="header">  
             <div class="header__wrapper">
                 <div class="header__info">
                     <h1 class="header__title">Film your event with us!</h1>
@@ -170,5 +175,6 @@
             </p>
         </footer>
         <script src="../dist/main.js"></script>
+        <script src="../src/hamburger.js"></script>
     </body>
 </html>
