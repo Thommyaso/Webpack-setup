@@ -355,7 +355,7 @@ a, a:visited, a:active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: calc( 300 * (clamp(var(--min-viewport), 100vw, var(--max-viewport)) / var(--ideal-viewport-width)) );
+  padding-left: calc( 150 * (clamp(var(--min-viewport), 100vw, var(--max-viewport)) / var(--ideal-viewport-width)) );
 }
 .info__header {
   background: var(--gradient-text-color);
@@ -380,6 +380,7 @@ a, a:visited, a:active {
   margin-top: 3.75rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .info__list-element {
@@ -571,6 +572,7 @@ a, a:visited, a:active {
     height: -moz-fit-content;
     height: fit-content;
     flex-wrap: nowrap;
+    width: 100%;
   }
   .grid__info-top {
     margin-left: 5%;

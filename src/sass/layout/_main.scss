@@ -80,7 +80,7 @@
  .info {
 
     $ideal-info-height: 868;
-    $ideal-info-padding-left: 300;
+    $ideal-info-padding-left: 150; //original was 300
     $header-margin-bottom: 2rem;
     $paragraph-max-width: 48.5rem;
     $ol-list-width: 60rem;
@@ -120,6 +120,7 @@
         margin-top: $ol-list-margin-top;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         flex-wrap: wrap;
     }
 
@@ -336,6 +337,7 @@
         &__list {
             height: fit-content;
             flex-wrap: nowrap;
+            width: 100%;
         }
     }
 
