@@ -36,8 +36,21 @@
     --btn-border-gray: #ffffff4f;
 
 //font sizes:
-    --small-font-size: 0.75rem;
-    --regular-font-size: 1rem;
-    --larger-font-size: 1.5rem;
-    --main-title-font-size: 3rem;
+    --small-font-size: 75%;
+    --regular-font-size: 100%;
+    --larger-font-size: 150%;
+    --main-title-font-size: 300%;
+}
+
+@media only screen and (max-width: 1300px) {
+
+    :root {
+
+    //font sizes:
+        /* --small-font-size: 50%; */
+        --regular-font-size: 75%;
+        --larger-font-size: 125%;
+        --main-title-font-size: 275%;
+
+    }
 }

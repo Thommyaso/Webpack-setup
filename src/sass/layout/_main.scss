@@ -168,17 +168,17 @@
         width: 100%;
     }
 
-    &__info-bottom{
-        margin-right: $grid-info-side-margin;
-        margin-left: auto;
+    &__info-top{
+        margin-left: $grid-info-side-margin;
+        margin-right: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    &__info-top{
-        margin-left: $grid-info-side-margin;
-        margin-right: auto;
+    &__info-bottom{
+        margin-right: $grid-info-side-margin;
+        margin-left: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -277,6 +277,90 @@
 
     &__img {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .icons-section {
+
+        $iconssection-ideal-sidepadding: 170;
+        $description-width: 13rem;
+
+        height: fit-content;
+        padding-left: #{scaleWidth($iconssection-ideal-sidepadding)};
+        padding-right: #{scaleWidth($iconssection-ideal-sidepadding)};
+
+        &__container {
+            flex-wrap: wrap;
+        }
+
+        &__sticker {
+            flex-basis: 50%;
+            margin-top: 5%;
+        }
+
+        &__description {
+            max-width: $description-width;
+        }
+
+        &__button {
+            margin-bottom: 5%;
+        }
+    }
+
+    .info {
+
+        $ideal-info-padding-left: 150;
+
+        height: fit-content;
+        background-position-y: 65%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-left: #{scaleWidth($ideal-info-padding-left)};
+        
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__header {
+            align-self: center;
+        }
+
+        &__paragraph {
+            align-self: center;
+            text-align: center;
+        }
+
+        &__list {
+            height: fit-content;
+            flex-wrap: nowrap;
+        }
+    }
+
+    .grid {
+
+        $grid-info-side-margin: 5%;
+        $paragraph-padding-bottom: 5%;
+
+        &__info-top{
+            margin-left: $grid-info-side-margin;
+            margin-right: $grid-info-side-margin;
+            align-items: center;
+        }
+
+        &__info-bottom{
+            margin-right: $grid-info-side-margin;
+            margin-left: $grid-info-side-margin;
+            align-items: center;
+        }
+
+        &__paragraph {
+            font-size: var(--small-font-size);
+            text-align: center;
+            padding-bottom: $paragraph-padding-bottom;
+        }
     }
 }
 
