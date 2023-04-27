@@ -366,5 +366,21 @@
     }
 }
 
+@media only screen and (max-width: 1024px) {
+
+    .info {
+        $info-side-padding: 5%;
+
+        padding-left: $info-side-padding;
+        padding-right: $info-side-padding;
+    }
+
+    .grid {
+        &__paragraph {
+            line-height: 140%;
+        }
+    }
+
+}
 
 
