@@ -385,6 +385,8 @@
 
 @media only screen and (max-width:768px) {
 
+    $main-title-font-size: 150%;
+
     .icons-section {
 
         $margin-bottom: 8%;
@@ -425,6 +427,7 @@
 
         &__header {
             text-align: center;
+            font-size: $main-title-font-size;
         }
 
         &__list {
@@ -433,6 +436,44 @@
 
         &__list-element {
             font-weight: bolder;
+        }
+    }
+
+    .grid {
+
+        $padding: 10%;
+
+        grid-template-columns: 1fr;
+
+        grid-template-areas: 
+            "one"
+            "two"
+            "three"
+            "four";
+
+        &__img1 {
+            grid-area: one;
+        }
+
+        &__info-top {
+            grid-area: two;
+            padding-top: $padding;
+            padding-bottom: $padding;
+            
+        }
+
+        &__header {
+            font-size: $main-title-font-size;
+        }
+
+        &__info-bottom {
+            grid-area: four;
+            padding-top: $padding;
+            padding-bottom: $padding;
+        }
+
+        &__img2 {
+            grid-area: three;
         }
     }
 }
