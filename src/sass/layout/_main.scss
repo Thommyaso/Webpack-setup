@@ -383,4 +383,41 @@
 
 }
 
+@media only screen and (max-width:768px) {
+
+    .icons-section {
+
+        $margin-bottom: 8%;
+        $sticker-contetnt-margin: 2%;
+
+        &__container {
+            margin-bottom: $margin-bottom;
+        }
+
+        &__sticker {
+            height: fit-content;
+            justify-content: space-around;
+            flex-basis: 100%;
+            margin-bottom: $margin-bottom;
+        }
+
+        &__icon-box {
+            margin-bottom: $sticker-contetnt-margin;
+        }
+
+        &__header {
+            padding-bottom: 0;
+            margin-bottom: $sticker-contetnt-margin;
+            line-height: normal;
+        }
+
+        &__paragraph {
+            line-height: normal;
+        }
+
+        &__button {
+            margin-bottom: $margin-bottom;
+        }
+    }
+}
 
