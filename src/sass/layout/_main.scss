@@ -11,7 +11,7 @@
     $sticker-height: 14.375rem;
     $icon-width: 6.875rem;
     $icon-height: 6.25rem;
-    $header-padding-bottom: 1.5rem;
+    $title-padding-bottom: 1.5rem;
 
     height: #{scaleHeight($ideal-icons-section-height)};
     width: inherit;
@@ -58,11 +58,11 @@
         align-content: center;
     }
 
-    &__header {
+    &__title {
         @include abstracts.gradient-text;
         align-self: center;
         font-size: var(--larger-font-size);
-        padding-bottom: $header-padding-bottom;
+        padding-bottom: $title-padding-bottom;
     }
 
     &__paragraph {
@@ -81,7 +81,7 @@
 
     $ideal-info-height: 868;
     $ideal-info-padding-left: 150; //original was 300
-    $header-margin-bottom: 2rem;
+    $title-margin-bottom: 2rem;
     $paragraph-max-width: 48.5rem;
     $ol-list-width: 60rem;
     $ol-list-height: 21.875rem;
@@ -102,10 +102,10 @@
     justify-content:center;
     padding-left: #{scaleWidth($ideal-info-padding-left)};
 
-    &__header {
+    &__title {
         @include abstracts.gradient-text;
         font-size: var(--main-title-font-size);
-        margin-bottom: $header-margin-bottom;
+        margin-bottom: $title-margin-bottom;
     }
 
     &__paragraph {
@@ -155,7 +155,7 @@
 .grid {
 
     $grid-info-side-margin: 6.875rem;
-    $header-padding-bottom: 1.5rem;
+    $title-padding-bottom: 1.5rem;
     $paragraph-max-width: 35rem;
     $paragraph-padding-bottom: 3.75rem;
 
@@ -185,11 +185,11 @@
         justify-content: center;
     }
 
-    &__header {
+    &__title {
         @include abstracts.gradient-text;
         font-size: var(--main-title-font-size);
         line-height:normal;
-        padding-bottom: $header-padding-bottom;
+        padding-bottom: $title-padding-bottom;
     }
 
     &__paragraph {
@@ -208,10 +208,10 @@
 
 .sign-up {
 
-    $ideal-signup-height: 485;
+    $ideal-signup-height: 489;
     $email-cover-radius-offset: 3rem;
     $input-padding-left: 1.25rem;
-    $header-margin-bottom: 2.625rem;
+    $title-margin-bottom: 2.625rem;
 
     width: inherit;
     height: #{scaleHeight($ideal-signup-height)};    
@@ -230,12 +230,12 @@
         position: absolute;   
     }
 
-    &__header {
+    &__title {
         position: relative;
         font-size: var(--main-title-font-size);
         color: var(--white-text);
         z-index: 100;
-        margin-bottom: $header-margin-bottom;
+        margin-bottom: $title-margin-bottom;
     }
 
     &__form {
@@ -325,7 +325,7 @@
             flex-direction: column;
         }
 
-        &__header {
+        &__title {
             align-self: center;
         }
 
@@ -407,7 +407,7 @@
             margin-bottom: $sticker-contetnt-margin;
         }
 
-        &__header {
+        &__title {
             padding-bottom: 0;
             margin-bottom: $sticker-contetnt-margin;
             line-height: normal;
@@ -425,7 +425,7 @@
     .info {
         background: none;
 
-        &__header {
+        &__title {
             text-align: center;
             font-size: $main-title-font-size;
         }
@@ -462,7 +462,7 @@
             
         }
 
-        &__header {
+        &__title {
             font-size: $main-title-font-size;
         }
 
@@ -483,7 +483,7 @@
         $form-height: 2rem;
         $input-padding-left: calc($form-height / 2);
         $input-width: 10rem;
-        $header-margin-bottom: 5%;
+        $title-margin-bottom: 5%;
     
         &__img {
             height: 0;
@@ -491,9 +491,9 @@
             display: none;
         }
 
-        &__header {
+        &__title {
             font-size: $main-title-font-size;
-            margin-bottom: $header-margin-bottom;
+            margin-bottom: $title-margin-bottom;
         }
 
         &__form {
