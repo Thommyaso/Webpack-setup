@@ -419,5 +419,21 @@
             margin-bottom: $margin-bottom;
         }
     }
+
+    .info {
+        background: none;
+
+        &__header {
+            text-align: center;
+        }
+
+        &__list {
+            align-items: center;
+        }
+
+        &__list-element {
+            font-weight: bolder;
+        }
+    }
 }
 
