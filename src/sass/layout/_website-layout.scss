@@ -30,3 +30,12 @@
     max-width: var(--ideal-viewport-width)px;
     height: #{scaleHeight($ideal-footer-height)};
 }
+
+@media only screen and (max-width:768px) {
+    .header {
+
+        $ideal-header-hight: 810;
+    
+        height: #{scalePhoneHeight($ideal-header-hight)};
+    }
+}

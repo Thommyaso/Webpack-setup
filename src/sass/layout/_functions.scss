@@ -11,3 +11,9 @@
     #{$value} * (clamp(var(--min-viewport), var(--aspect-ratio), var(--max-viewport)) / var(--ideal-viewport-height))
   );
 }
+
+@function scalePhoneHeight($value) {
+  @return calc(
+    #{$value} * (clamp(var(--min-viewport), var(--smartphone-aspect-ratio), var(--max-viewport)) / var(--ideal-viewport-height))
+  );
+}
