@@ -220,6 +220,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-wrap: nowrap;
 
     &__img {
         
@@ -231,7 +232,6 @@
 
     &__header {
         position: relative;
-        z-index: 1;
         font-size: var(--main-title-font-size);
         color: var(--white-text);
         z-index: 100;
@@ -243,7 +243,7 @@
         width: fit-content;
     }
 
-    &__input{
+    &__input {
         height: 100%;
         color: var(--white-text);
         border: var(--transparent-button-border);
@@ -254,7 +254,7 @@
         outline: none;
     }
 
-    &__button{
+    &__button {
         @include abstracts.btn-white;
         height: 100%;
         float: right;
@@ -474,6 +474,42 @@
 
         &__img2 {
             grid-area: three;
+        }
+    }
+
+    .sign-up {
+
+        $email-cover-radius-offset: 1.8rem;
+        $form-height: 2rem;
+        $input-padding-left: calc($form-height / 2);
+        $input-width: 10rem;
+        $header-margin-bottom: 5%;
+    
+        &__img {
+            height: 0;
+            width: 0;
+            display: none;
+        }
+
+        &__header {
+            font-size: $main-title-font-size;
+            margin-bottom: $header-margin-bottom;
+        }
+
+        &__form {
+            height: $form-height;       
+        }
+
+        &__input {
+            font-size: 75%;
+            width: $input-width;
+            padding-left: $input-padding-left;
+            padding-right: calc($email-cover-radius-offset + $input-padding-left / 2);
+        }
+
+        &__button {
+            padding: 0 1rem;
+            left: -$email-cover-radius-offset;;
         }
     }
 }
