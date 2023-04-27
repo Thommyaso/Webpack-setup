@@ -60,3 +60,12 @@
 
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    :root {
+    //font sizes:
+        --regular-font-size: 75%;
+        --larger-font-size: 100%;
+        --main-title-font-size: 225%;
+    }
+}

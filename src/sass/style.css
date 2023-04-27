@@ -71,6 +71,13 @@ a, a:visited, a:active {
     --main-title-font-size: 275%;
   }
 }
+@media only screen and (max-width: 1024px) {
+  :root {
+    --regular-font-size: 75%;
+    --larger-font-size: 100%;
+    --main-title-font-size: 225%;
+  }
+}
 .nav {
   position: absolute;
   top: 0;
@@ -588,6 +595,15 @@ a, a:visited, a:active {
     font-size: var(--small-font-size);
     text-align: center;
     padding-bottom: 5%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .info {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .grid__paragraph {
+    line-height: 140%;
   }
 }
 .body {
