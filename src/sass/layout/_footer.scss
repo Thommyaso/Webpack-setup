@@ -10,8 +10,13 @@
     line-height: 1.5rem;
     padding-top: $padding-top;
 
+    &__paragraph {
+        text-align: center;
+    }
+
     &__link {
         font-weight: bold;
+        color: var(--black-text) ;
     }
 }
 
@@ -19,6 +24,8 @@
     .footer{
         padding-top: 0;
         padding-bottom: 15%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     
 }
