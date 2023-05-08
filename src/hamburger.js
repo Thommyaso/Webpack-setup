@@ -8,13 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburgerBtn.classList.toggle('nav__hamburger-clicked');
   };
 
-  menuLinks.forEach((element) => {
-    element.addEventListener('click', () => {
+  menuLinks.forEach((el) => {
+    // eslint-disable-next-line no-param-reassign
+    el.onclick = () => {
       toggle();
-    });
+    };
   });
 
-  hamburgerBtn.addEventListener('click', () => {
+  hamburgerBtn.onclick = () => {
     toggle();
-  });
+  };
 });
