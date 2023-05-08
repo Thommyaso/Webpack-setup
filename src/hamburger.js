@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuLinks = document.querySelectorAll('.nav__link');
 
   function toggle() {
-    menu.classList.toggle('nav__menu-display');
+    menu.classList.toggle('nav__menu--visible');
     hamburgerBtn.classList.toggle('nav__hamburger-clicked');
   }
 

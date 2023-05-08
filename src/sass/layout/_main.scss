@@ -28,7 +28,6 @@
         height: fit-content;
         display: flex;
         align-content: center;
-        /* flex-wrap: wrap; */
         justify-content:space-between;
         margin-bottom: $container-margin-bottom;
     }
@@ -251,7 +250,6 @@
         padding-left: $input-padding-left;
         padding-right: calc($email-cover-radius-offset + $input-padding-left / 2);
         border-radius: var(--border-radius);
-        outline: none;
     }
 
     &__button {

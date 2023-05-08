@@ -22,8 +22,6 @@
     }
     
     &__wrapper{
-        z-index: 10;
-        width: inherit;
         height: inherit;
         padding-top: #{scaleHeight($ideal-headerwrapper-padding-top)};
     }
@@ -99,7 +97,7 @@
         background-image: none;
 
         &__wrapper{
-            background-image: url('../../png/zoomindrone.jpg');
+            background-image: url('/png/zoomindrone.jpg');
             background-size: cover;
             overflow: hidden;
             background-repeat: no-repeat;
@@ -126,13 +124,13 @@
 
         &__title {
             color: var(--btn-white-text-color);
-            font-weight: bolder;
+            font-weight: 900;
             text-align: center;
         }
 
         &__paragraph {
             color: var(--black-text);
-            font-weight: bolder;
+            font-weight: 900;
         }
 
         &__options {

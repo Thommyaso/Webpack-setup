@@ -166,7 +166,7 @@
 
         //Activated by click with eventlistener in js:
         //activates the hamburger icon
-        &__menu-display {
+        &__menu--visible {
             height: $menu-display-height;        
         }
         //changes hamburger background when clicked:
