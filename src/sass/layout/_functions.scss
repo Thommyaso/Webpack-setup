@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+
+@function scaleWidth($value) {
+  @return calc(
+    #{$value} * (clamp(var(--min-viewport), 100vw, var(--max-viewport)) / var(--ideal-viewport-width))
+  );
+}
+
+@function scaleHeight($value) {
+  @return calc(
+    #{$value} * (clamp(var(--min-viewport), var(--aspect-ratio), var(--max-viewport)) / var(--ideal-viewport-height))
+  );
+}
+
+@function scalePhoneHeight($value) {
+  @return calc(
+    #{$value} * (clamp(var(--min-viewport), var(--smartphone-aspect-ratio), var(--max-viewport)) / var(--ideal-viewport-height))
+  );
+}

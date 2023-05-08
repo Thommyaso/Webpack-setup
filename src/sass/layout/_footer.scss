@@ -1,0 +1,31 @@
+.footer {
+
+    $padding-top: 3.125rem;
+
+    color: var(--small-text-color);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--small-font-size);
+    line-height: 1.5rem;
+    padding-top: $padding-top;
+
+    &__paragraph {
+        text-align: center;
+    }
+
+    &__link {
+        font-weight: 900;
+        color: var(--black-text) ;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .footer{
+        padding-top: 0;
+        padding-bottom: 15%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+}

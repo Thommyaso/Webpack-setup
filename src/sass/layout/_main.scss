@@ -1,0 +1,518 @@
+@use '../abstracts';
+@use './functions' as *;
+
+.icons-section {
+
+    $ideal-icons-section-height: 600;
+    $iconssection-ideal-sidepadding: 340;
+    $ideal-icons-section-paddingbottom: 100;
+    $container-margin-bottom: 6.5rem;
+    $sticker-width: 15.125rem;
+    $sticker-height: 14.375rem;
+    $icon-width: 6.875rem;
+    $icon-height: 6.25rem;
+    $title-padding-bottom: 1.5rem;
+
+    height: #{scaleHeight($ideal-icons-section-height)};
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: #{scaleWidth($iconssection-ideal-sidepadding)};
+    padding-right: #{scaleWidth($iconssection-ideal-sidepadding)};
+    background-color: var(--gray-background);
+
+    &__container {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-content: center;
+        justify-content:space-between;
+        margin-bottom: $container-margin-bottom;
+    }
+
+    &__sticker {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        justify-content: space-between;
+        width: $sticker-width;
+        height: $sticker-height;
+    }
+
+    &__icon-box {
+        width: $icon-width;
+        height: $icon-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: baseline;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    &__title {
+        @include abstracts.gradient-text;
+        align-self: center;
+        font-size: var(--larger-font-size);
+        padding-bottom: $title-padding-bottom;
+    }
+
+    &__paragraph {
+        text-align: center;
+        color: var( --standard-paragraph-color);
+        line-height: 1.47rem;
+    }
+
+    &__button {
+        @include abstracts.btn-blue;
+    }
+}
+
+
+ .info {
+
+    $ideal-info-height: 868;
+    $ideal-info-padding-left: 150; //original was 300
+    $title-margin-bottom: 2rem;
+    $paragraph-max-width: 48.5rem;
+    $ol-list-width: 60rem;
+    $ol-list-height: 21.875rem;
+    $ol-list-margin-top: 3.75rem;
+    $list-element-max-width: 23.375rem;
+    $list-element-margin-bottom: 3em;
+    $list-el-bullet-square-size: 3.125rem;
+    $list-el-bullet-margin-right: 1.875rem;
+
+
+    height: #{scaleHeight($ideal-info-height)};
+    background-image: url('/png/big-drone.png');
+    background-size: 50%;
+    background-position: right;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding-left: #{scaleWidth($ideal-info-padding-left)};
+
+    &__title {
+        @include abstracts.gradient-text;
+        font-size: var(--main-title-font-size);
+        margin-bottom: $title-margin-bottom;
+    }
+
+    &__paragraph {
+        color: var( --standard-paragraph-color);
+        max-width: $paragraph-max-width;
+        line-height: 2.25rem;
+    }
+
+    &__list{
+        width: $ol-list-width;
+        height: $ol-list-height;
+        margin-top: $ol-list-margin-top;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__list-element {
+        color: var(--small-text-color);
+        display: flex;
+        margin-bottom: $list-element-margin-bottom;
+        max-width: $list-element-max-width;
+        counter-increment: listCounter;
+        align-items: center;
+        font-size: var(--small-font-size);
+        line-height: 1.5rem;
+    }
+
+    &__list-element::before {
+        content: counter(listCounter);
+        font-size: var(--larger-font-size);
+        border: var(--list-bullet-border);
+        color: var(--list-bullet-color);
+        border-radius: 50%;
+        width: $list-el-bullet-square-size;
+        height: $list-el-bullet-square-size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.0;
+        flex-shrink: 0;
+        margin-right: $list-el-bullet-margin-right;
+    }
+} 
+
+.grid {
+
+    $grid-info-side-margin: 6.875rem;
+    $title-padding-bottom: 1.5rem;
+    $paragraph-max-width: 35rem;
+    $paragraph-padding-bottom: 3.75rem;
+
+    height: fit-content;
+    width: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--gray-background);
+
+    &__img {
+        width: 100%;
+    }
+
+    &__info-top{
+        margin-left: $grid-info-side-margin;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__info-bottom{
+        margin-right: $grid-info-side-margin;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+        @include abstracts.gradient-text;
+        font-size: var(--main-title-font-size);
+        line-height:normal;
+        padding-bottom: $title-padding-bottom;
+    }
+
+    &__paragraph {
+        line-height: 2.25rem;
+        max-width: $paragraph-max-width;
+        color: var(--standard-paragraph-color);
+        text-align: left;
+        padding-bottom: $paragraph-padding-bottom;
+    }
+
+    &__button {
+        @include abstracts.btn-blue;
+        width: fit-content;
+    }
+}
+
+.sign-up {
+
+    $ideal-signup-height: 489;
+    $email-cover-radius-offset: 3rem;
+    $input-padding-left: 1.25rem;
+    $title-margin-bottom: 2.625rem;
+
+    width: inherit;
+    height: #{scaleHeight($ideal-signup-height)};    
+    background-image: var(--background-gradient);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    &__img {
+        
+        opacity: 0.2;
+        z-index: 0;
+        width: 100%;
+        position: absolute;   
+    }
+
+    &__title {
+        position: relative;
+        font-size: var(--main-title-font-size);
+        color: var(--white-text);
+        z-index: 100;
+        margin-bottom: $title-margin-bottom;
+    }
+
+    &__form {
+        position: relative;
+        width: fit-content;
+    }
+
+    &__input {
+        height: 100%;
+        color: var(--white-text);
+        border: var(--transparent-button-border);
+        background-color: var(--signup-input-background-color);
+        padding-left: $input-padding-left;
+        padding-right: calc($email-cover-radius-offset + $input-padding-left / 2);
+        border-radius: var(--border-radius);
+    }
+
+    &__button {
+        @include abstracts.btn-white;
+        height: 100%;
+        float: right;
+        position: relative;
+        left: -$email-cover-radius-offset;
+        padding: var(--top-bttom-padding) var(--email-btn-left-right-padding);
+    }
+
+    &__input::placeholder {
+        color: var(--white-text);
+        opacity: 0.8;
+    }
+}
+
+.map {
+
+    $ideal-map-height: 607;
+
+    width: inherit;
+    height: #{scaleHeight($ideal-map-height)};
+
+    &__img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .icons-section {
+
+        $iconssection-ideal-sidepadding: 170;
+        $description-width: 13rem;
+
+        height: fit-content;
+        padding-left: #{scaleWidth($iconssection-ideal-sidepadding)};
+        padding-right: #{scaleWidth($iconssection-ideal-sidepadding)};
+
+        &__container {
+            flex-wrap: wrap;
+        }
+
+        &__sticker {
+            flex-basis: 50%;
+            margin-top: 5%;
+        }
+
+        &__description {
+            max-width: $description-width;
+        }
+
+        &__button {
+            margin-bottom: 5%;
+        }
+    }
+
+    .info {
+
+        $ideal-info-padding-left: 150;
+
+        height: fit-content;
+        background-position-y: 65%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-left: #{scaleWidth($ideal-info-padding-left)};
+        
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__title {
+            align-self: center;
+        }
+
+        &__paragraph {
+            align-self: center;
+            text-align: center;
+        }
+
+        &__list {
+            height: fit-content;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+    }
+
+    .grid {
+
+        $grid-info-side-margin: 5%;
+        $paragraph-padding-bottom: 5%;
+
+        &__info-top{
+            margin-left: $grid-info-side-margin;
+            margin-right: $grid-info-side-margin;
+            align-items: center;
+        }
+
+        &__info-bottom{
+            margin-right: $grid-info-side-margin;
+            margin-left: $grid-info-side-margin;
+            align-items: center;
+        }
+
+        &__paragraph {
+            font-size: var(--small-font-size);
+            text-align: center;
+            padding-bottom: $paragraph-padding-bottom;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .info {
+        $info-side-padding: 5%;
+
+        padding-left: $info-side-padding;
+        padding-right: $info-side-padding;
+    }
+
+    .grid {
+        &__paragraph {
+            line-height: 140%;
+        }
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+
+    $main-title-font-size: 150%;
+
+    .icons-section {
+
+        $margin-bottom: 8%;
+        $sticker-contetnt-margin: 2%;
+
+        &__container {
+            margin-bottom: $margin-bottom;
+        }
+
+        &__sticker {
+            height: fit-content;
+            justify-content: space-around;
+            flex-basis: 100%;
+            margin-bottom: $margin-bottom;
+        }
+
+        &__icon-box {
+            margin-bottom: $sticker-contetnt-margin;
+        }
+
+        &__title {
+            padding-bottom: 0;
+            margin-bottom: $sticker-contetnt-margin;
+            line-height: normal;
+        }
+
+        &__paragraph {
+            line-height: normal;
+        }
+
+        &__button {
+            margin-bottom: $margin-bottom;
+        }
+    }
+
+    .info {
+        background: none;
+
+        &__title {
+            text-align: center;
+            font-size: $main-title-font-size;
+        }
+
+        &__list {
+            align-items: center;
+        }
+
+        &__list-element {
+            font-weight: bolder;
+        }
+    }
+
+    .grid {
+
+        $padding: 10%;
+
+        grid-template-columns: 1fr;
+
+        grid-template-areas: 
+            "one"
+            "two"
+            "three"
+            "four";
+
+        &__img1 {
+            grid-area: one;
+        }
+
+        &__info-top {
+            grid-area: two;
+            padding-top: $padding;
+            padding-bottom: $padding;
+            
+        }
+
+        &__title {
+            font-size: $main-title-font-size;
+        }
+
+        &__info-bottom {
+            grid-area: four;
+            padding-top: $padding;
+            padding-bottom: $padding;
+        }
+
+        &__img2 {
+            grid-area: three;
+        }
+    }
+
+    .sign-up {
+
+        $email-cover-radius-offset: 1.8rem;
+        $form-height: 2rem;
+        $input-padding-left: calc($form-height / 2);
+        $input-width: 10rem;
+        $title-margin-bottom: 5%;
+    
+        &__img {
+            height: 0;
+            width: 0;
+            display: none;
+        }
+
+        &__title {
+            font-size: $main-title-font-size;
+            margin-bottom: $title-margin-bottom;
+        }
+
+        &__form {
+            height: $form-height;       
+        }
+
+        &__input {
+            font-size: 75%;
+            width: $input-width;
+            padding-left: $input-padding-left;
+            padding-right: calc($email-cover-radius-offset + $input-padding-left / 2);
+        }
+
+        &__button {
+            padding: 0 1rem;
+            left: -$email-cover-radius-offset;;
+        }
+    }
+
+    .map {
+        height: 100%;
+    }
+}
+

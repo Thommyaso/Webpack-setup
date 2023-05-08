@@ -1,0 +1,155 @@
+@use '../abstracts';
+@use './functions' as *;
+
+.header {
+ 
+    $ideal-headerwrapper-padding-top: 255;
+    $title-margin-bottom: 1.375rem;
+    $paragraph-max-width: 35rem;
+    $paragraph-margin-bottom: 3.875rem;
+    $options-container-width: 26.25rem;
+    $play-btn-icon-margin-right: 1.25rem;
+
+    position: relative;
+    background-image: var(--background-gradient);
+
+    &__img {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        opacity: 0.6;
+        z-index: 0;
+    }
+    
+    &__wrapper{
+        height: inherit;
+        padding-top: #{scaleHeight($ideal-headerwrapper-padding-top)};
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    
+    &__title {
+        width: fit-content;
+        height: fit-content;
+        font-size: var(--main-title-font-size);
+        line-height:normal;
+        color: var(--white-text);
+        z-index: 1;
+        margin-bottom: $title-margin-bottom;
+    }
+
+    &__paragraph {
+        max-width: $paragraph-max-width;
+        color: var(--white-text);
+        line-height: 1.875rem;
+        z-index: 1;
+        margin-bottom: $paragraph-margin-bottom;
+        text-align: center;
+    }
+
+    &__options {
+        width: $options-container-width;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+    }
+
+    &__icon {
+        padding-right: $play-btn-icon-margin-right;
+    }
+
+    &__btn-ask {
+        @include abstracts.btn-white;
+        z-index: 1;
+        padding-left: 0;
+        padding-right: 0;
+        width: 50%
+    }
+
+    &__btn-watch {
+        @include abstracts.btn-transparent;
+        width: 45%;
+        padding-left: 0;
+        padding-right: 0;
+        z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .header {
+        &__btn-watch {
+            background-color: var(--btn-border-gray) ;
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .header {
+
+        $info-padding: 1rem;
+        $btn-margin-top: 1rem;
+
+        background-image: none;
+
+        &__wrapper{
+            background-image: url('/png/zoomindrone.jpg');
+            background-size: cover;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__img{
+            height: 0;
+            width: 0;
+            display: none;
+        }
+
+        &__info {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            background-color: var(--mobile-background-color);
+            height: fit-content;
+            border-radius: 1rem;
+            padding: $info-padding;
+        }
+
+        &__title {
+            color: var(--btn-white-text-color);
+            font-weight: 900;
+            text-align: center;
+        }
+
+        &__paragraph {
+            color: var(--black-text);
+            font-weight: 900;
+        }
+
+        &__options {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        &__btn-ask {
+            width: 60%;
+        }
+    
+        &__btn-watch {
+            @include abstracts.btn-blue;
+            width: 60%;
+            margin-top: $btn-margin-top;
+            padding-left: 0;
+            padding-right: 0;
+            z-index: 1;
+        }
+    }
+}

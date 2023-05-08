@@ -1,0 +1,28 @@
+@mixin btn-transparent {
+    border: var(--transparent-button-border);
+    background-color: transparent;
+    color: var(--white-text);
+    padding: var(--top-bttom-padding) var(--standard-left-right-padding);
+}
+
+@mixin btn-white {
+    background-color: var(--white-text);
+    color: var(--btn-white-text-color);
+    border: none;
+    padding: var(--top-bttom-padding) var(--standard-left-right-padding);
+}
+
+@mixin btn-blue {
+    background-color: var(--btn-blue-color);
+    color: var(--white-text);
+    border: none;
+    padding: var(--top-bttom-padding) var(--standard-left-right-padding);
+}
+
+@mixin gradient-text {
+    background: var(--gradient-text-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    height: fit-content;
+}

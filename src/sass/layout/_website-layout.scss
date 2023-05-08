@@ -1,0 +1,41 @@
+@use './functions' as *;
+
+//base structure designed using flex: 
+.body {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.header {
+
+    $ideal-header-hight: 1080;
+
+    height: #{scaleHeight($ideal-header-hight)};
+    max-width: var(--ideal-viewport-width)px;
+    
+}
+
+.main {
+    max-width: var(--ideal-viewport-width)px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+
+    $ideal-footer-height: 350;
+
+    max-width: var(--ideal-viewport-width)px;
+    height: #{scaleHeight($ideal-footer-height)};
+}
+
+@media only screen and (max-width:768px) {
+    .header {
+
+        $ideal-header-hight: 810;
+    
+        height: #{scalePhoneHeight($ideal-header-hight)};
+    }
+}

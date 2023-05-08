@@ -1,0 +1,73 @@
+:root {
+//main display sizing:
+    --ideal-viewport-width: 1920;
+    --ideal-viewport-height: 1080;
+    --max-viewport: 3840px;
+    --min-viewport: 350px;
+    --aspect-ratio: calc(9/16 * 100vw);
+    --smartphone-aspect-ratio: calc(1.5 *80vh);
+
+//border measurements:
+    --border-radius: 1.563rem;
+    --top-bttom-padding: 0.875rem;
+    --left-right-navigation-button-padding: 1.25rem;
+    --standard-left-right-padding: 3.35rem;
+    --email-btn-left-right-padding: 3rem;
+    --transparent-button-border: 0.063rem solid var(--btn-border-gray);
+    --white-border:#ffffff;
+
+//list measurements:
+    --list-bullet-border: 0.125rem solid var(--list-bullet-border-color);
+ 
+//text colors:
+    --btn-white-text-color: #d32721;
+    --white-text:#ffffff;
+    --small-text-color: #a7acbc;
+    --standard-paragraph-color: #5e6372;
+    --list-bullet-color: #1d2f5e;
+    --gradient-text-color: linear-gradient(15deg, #cb0035 0%, #e06900 100%);
+    --black-text: #000000;
+
+//background colors:
+    --gray-background: #f6f6f6;
+    --background-gradient: linear-gradient(39deg, #cb0036 0%, #e06800 100%);
+    --btn-blue-color: #264699;
+    --signup-input-background-color: #ffffff15;
+    --navbar-background-color: #4d4d4d;
+    --hamburger-background-color: #cb0035;
+    --white-background: #ffffff;
+    --menu-link-hover-background: #bebebe66;
+    --clicked-hamburger-background: #f08080;
+    --mobile-background-color: #dfdfdf8c;
+    
+//border colours:
+    --list-bullet-border-color: #c7cde0;
+    --btn-border-gray: #ffffff4f;
+
+//font sizes:
+    --small-font-size: 75%;
+    --regular-font-size: 100%;
+    --larger-font-size: 150%;
+    --main-title-font-size: 300%;
+}
+
+@media only screen and (max-width: 1300px) {
+
+    :root {
+
+    //font sizes:
+        --regular-font-size: 75%;
+        --larger-font-size: 125%;
+        --main-title-font-size: 275%;
+
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    :root {
+    //font sizes:
+        --regular-font-size: 75%;
+        --larger-font-size: 100%;
+        --main-title-font-size: 225%;
+    }
+}
