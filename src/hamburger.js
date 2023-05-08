@@ -3,19 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const menu = document.querySelector('.nav__menu');
   const menuLinks = document.querySelectorAll('.nav__link');
 
-  const toggle = () => {
+  function toggle() {
     menu.classList.toggle('nav__menu-display');
     hamburgerBtn.classList.toggle('nav__hamburger-clicked');
-  };
+  }
 
   menuLinks.forEach((el) => {
     // eslint-disable-next-line no-param-reassign
-    el.onclick = () => {
-      toggle();
-    };
+    el.onclick = toggle;
   });
 
-  hamburgerBtn.onclick = () => {
-    toggle();
-  };
+  hamburgerBtn.onclick = toggle;
 });
